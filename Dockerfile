@@ -38,6 +38,9 @@ RUN pyenv init - >> ~/.bash_profile
 # setup default python libraries
 RUN pip install pip --upgrade
 RUN pip install virtualenv flake8
+RUN pip install smart_open s3fs s3path awswrangler
+RUN pip install torch dgl dgllife torch_geometric lightning tensorboard
+RUN pip install deepchem[torch] rdkit selfies
 
 ENV LANG=ja_JP.UTF-8
 ENV OMP_NUM_THREADS 1
